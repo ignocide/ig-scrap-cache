@@ -1,14 +1,14 @@
 # instagram-tag-image  
 ----  
-  
+
 search media using tag name, and cache that using redis
 
 ## initial  
 
 ```javascript
-var InstagarmTagImage = require('instagram-tag-image')
+var IgScrap = require('ig-scrap-cache')
 
-var instagarmTagImage = new InstagarmTagImage({
+var igScrap = new IgScrap({
   redis: {  
     //redis options
     port: 6379,
@@ -25,7 +25,7 @@ var instagarmTagImage = new InstagarmTagImage({
 
 ### CONFIGS  
 
-#### redis 
+#### redis
 
 * [node-redis site](https://github.com/NodeRedis/node_redis)
 
@@ -43,7 +43,16 @@ var instagarmTagImage = new InstagarmTagImage({
 ### search media by tags
 
 ```javascript
-instagarmTagImage.getMedia(tag_name, function (err, result) {
+igScrap.getMediaByTag(tag_name, function (err, result) {
+// result.thumbnails()
+// result.standard()
+//result
+})
+```
+### search media by users
+
+```javascript
+igScrap.getMediaByUser(user, function (err, result) {
 // result.thumbnails()
 // result.standard()
 //result
