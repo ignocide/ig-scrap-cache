@@ -1,6 +1,6 @@
 {
   "name": "ig-scrap-cache",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "scrap and caching by use a redis from instagram",
   "main": "index.js",
   "directories": {
@@ -12,7 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "repository": {
     "type": "git",

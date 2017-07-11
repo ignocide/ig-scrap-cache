@@ -1,4 +1,4 @@
-# instagram-tag-image  
+# ig-scrap-cache  
 ----  
 
 search media using tag name, and cache that using redis
@@ -43,7 +43,8 @@ var igScrap = new IgScrap({
 ### search media by tags
 
 ```javascript
-igScrap.getMediaByTag(tag_name, function (err, result) {
+//https://www.instagram.com/explore/tags/{{tab}}/ or tag
+igScrap.getMediaByTag(tag_name/*or url*/, function (err, result) {
 // result.thumbnails()
 // result.standard()
 //result
@@ -52,7 +53,22 @@ igScrap.getMediaByTag(tag_name, function (err, result) {
 ### search media by users
 
 ```javascript
-igScrap.getMediaByUser(user, function (err, result) {
+
+// https://www.instagram.com/{{userid}}/ or userid
+igScrap.getMediaByUser(user/*or url*/, function (err, result) {
+// result.thumbnails()
+// result.standard()
+//result
+})
+```
+
+
+### search media by users
+#### it is unstable
+```javascript
+
+// https://www.instagram.com/{{userid}}/ or https://www.instagram.com/explore/tags/{{tab}}
+igScrap.getMedia(url, function (err, result) {
 // result.thumbnails()
 // result.standard()
 //result
@@ -62,3 +78,10 @@ igScrap.getMediaByUser(user, function (err, result) {
 # warning  
 
 In case of first time in search by tag, return empty array, use enableFirstTime option
+
+
+#change log  
+
+### 1.1.0
+* tag_name, user can be repleaced as url
+* add method 'getMedia'
