@@ -83,5 +83,8 @@ In case of first time in search by tag, return empty array, use enableFirstTime 
 #change log  
 
 ### 1.1.0
-* tag_name, user can be repleaced as url
-* add method 'getMedia'
+* tag_name, user can be repleaced as url  
+* add method 'getMedia'  
+
+#test
+* npm test
