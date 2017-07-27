@@ -16,8 +16,8 @@ var log = function (err, list) {
   console.log(err, list)
 }
 
+igScrap.getMediaByTag('nodejs!!!!', log)
 igScrap.getMediaByTag('nodejs', log)
-
 igScrap.getMediaByUser('zuck', log)
 
 igScrap.getMediaByUrl('https://www.instagram.com/explore/tags/nodejs/', log)
