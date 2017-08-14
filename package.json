@@ -1,6 +1,6 @@
 {
   "name": "ig-scrap-cache",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "scrap and caching by use a redis from instagram",
   "main": "index.js",
   "directories": {
