@@ -34,5 +34,4 @@ igScrap.clearCache(function () {
 
   // nocache functions
   igScrap.searchByUser('kimdoinjdny', log)
-  igScrap.searchByUser('imegg', log)
 })

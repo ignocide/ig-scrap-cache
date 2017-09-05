@@ -6,9 +6,9 @@ search media using tag name, and cache that using redis
 ## initial  
 
 ```javascript
-var IgScrap = require('ig-scrap-cache')
+var IgScrapCache = require('ig-scrap-cache')
 
-var igScrap = new IgScrap({
+var igScrap = new IgScrapCache({
   redis: {  
     //redis options
     port: 6379,
@@ -62,6 +62,17 @@ igScrap.getMediaByUser(user/*or url*/, function (err, result) {
 })
 ```
 
+### search users
+
+```javascript
+
+// https://www.instagram.com/{{userid}}/ or userid
+igScrap.getUser(user/*or url*/, function (err, result) {
+  var user = result.user
+  var media = result.media
+})
+```
+
 
 ### search media by users
 #### it is unstable
@@ -75,6 +86,18 @@ igScrap.getMedia(url, function (err, result) {
 })
 ```
 
+
+### clear cache
+```javascript
+
+//remove cache about cache time, cache result, not queue
+igScrap.getMedia(url, function (err, result) {
+  // result.thumbnails()
+  // result.standard()
+  //result
+})
+```
+
 # warning  
 
 In case of first time in search by tag, return empty array, use enableFirstTime option
@@ -85,6 +108,12 @@ In case of first time in search by tag, return empty array, use enableFirstTime 
 ### 1.1.0
 * tag_name, user can be repleaced as url  
 * add method 'getMedia'  
+
+
+### 2.0.0
+* use namespace (IGSCRAPE)
+* add getUser, clearCache
+* crawling code is modularized
 
 #test
 * npm test

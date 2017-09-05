@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "ig-scrap": "^1.0.0",
     "redis": "^2.7.1"
   },
   "devDependencies": {},
