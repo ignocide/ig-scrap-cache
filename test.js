@@ -32,4 +32,3 @@ igScrap.getMediaByTag('https://www.instagram.com/explore/tags/nodejs/', log)
 igScrap.getMediaByUser('https://www.instagram.com/zuck/', log)
 
 igScrap.getMediaByUser('https://Instagram.com/zuck/', log)
-
