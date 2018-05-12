@@ -45,8 +45,6 @@ var igScrap = new IgScrapCache({
 ```javascript
 //https://www.instagram.com/explore/tags/{{tab}}/ or tag
 igScrap.getMediaByTag(tag_name/*or url*/, function (err, result) {
-// result.thumbnails()
-// result.standard()
 //result
 })
 ```
@@ -56,8 +54,6 @@ igScrap.getMediaByTag(tag_name/*or url*/, function (err, result) {
 
 // https://www.instagram.com/{{userid}}/ or userid
 igScrap.getMediaByUser(user/*or url*/, function (err, result) {
-// result.thumbnails()
-// result.standard()
 //result
 })
 ```
@@ -110,10 +106,14 @@ In case of first time in search by tag, return empty array, use enableFirstTime 
 * add method 'getMedia'  
 
 
-### 2.0.0
+### 2.0.0  
 * use namespace (IGSCRAPE)
 * add getUser, clearCache
 * crawling code is modularized
+
+### 3.0.0  
+
+* version up `ig-scrap` module  
 
 #test
 * npm test
